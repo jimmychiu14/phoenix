@@ -1,0 +1,17 @@
+/Volumes/APP2/workspace/phoenix/backend/src/Infrastructure/Phoenix.Infrastructure/bin/Debug/net10.0/Phoenix.Infrastructure.deps.json
+/Volumes/APP2/workspace/phoenix/backend/src/Infrastructure/Phoenix.Infrastructure/bin/Debug/net10.0/Phoenix.Infrastructure.dll
+/Volumes/APP2/workspace/phoenix/backend/src/Infrastructure/Phoenix.Infrastructure/bin/Debug/net10.0/Phoenix.Infrastructure.pdb
+/Volumes/APP2/workspace/phoenix/backend/src/Infrastructure/Phoenix.Infrastructure/bin/Debug/net10.0/Phoenix.Application.dll
+/Volumes/APP2/workspace/phoenix/backend/src/Infrastructure/Phoenix.Infrastructure/bin/Debug/net10.0/Phoenix.Domain.dll
+/Volumes/APP2/workspace/phoenix/backend/src/Infrastructure/Phoenix.Infrastructure/bin/Debug/net10.0/Phoenix.Application.pdb
+/Volumes/APP2/workspace/phoenix/backend/src/Infrastructure/Phoenix.Infrastructure/bin/Debug/net10.0/Phoenix.Domain.pdb
+/Volumes/APP2/workspace/phoenix/backend/src/Infrastructure/Phoenix.Infrastructure/obj/Debug/net10.0/Phoenix.Infrastructure.csproj.AssemblyReference.cache
+/Volumes/APP2/workspace/phoenix/backend/src/Infrastructure/Phoenix.Infrastructure/obj/Debug/net10.0/Phoenix.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Volumes/APP2/workspace/phoenix/backend/src/Infrastructure/Phoenix.Infrastructure/obj/Debug/net10.0/Phoenix.Infrastructure.AssemblyInfoInputs.cache
+/Volumes/APP2/workspace/phoenix/backend/src/Infrastructure/Phoenix.Infrastructure/obj/Debug/net10.0/Phoenix.Infrastructure.AssemblyInfo.cs
+/Volumes/APP2/workspace/phoenix/backend/src/Infrastructure/Phoenix.Infrastructure/obj/Debug/net10.0/Phoenix.Infrastructure.csproj.CoreCompileInputs.cache
+/Volumes/APP2/workspace/phoenix/backend/src/Infrastructure/Phoenix.Infrastructure/obj/Debug/net10.0/Phoenix..77997120.Up2Date
+/Volumes/APP2/workspace/phoenix/backend/src/Infrastructure/Phoenix.Infrastructure/obj/Debug/net10.0/Phoenix.Infrastructure.dll
+/Volumes/APP2/workspace/phoenix/backend/src/Infrastructure/Phoenix.Infrastructure/obj/Debug/net10.0/refint/Phoenix.Infrastructure.dll
+/Volumes/APP2/workspace/phoenix/backend/src/Infrastructure/Phoenix.Infrastructure/obj/Debug/net10.0/Phoenix.Infrastructure.pdb
+/Volumes/APP2/workspace/phoenix/backend/src/Infrastructure/Phoenix.Infrastructure/obj/Debug/net10.0/ref/Phoenix.Infrastructure.dll

@@ -1,0 +1,11 @@
+/Volumes/APP2/workspace/phoenix/backend/src/Domain/Phoenix.Domain/bin/Debug/net10.0/Phoenix.Domain.deps.json
+/Volumes/APP2/workspace/phoenix/backend/src/Domain/Phoenix.Domain/bin/Debug/net10.0/Phoenix.Domain.dll
+/Volumes/APP2/workspace/phoenix/backend/src/Domain/Phoenix.Domain/bin/Debug/net10.0/Phoenix.Domain.pdb
+/Volumes/APP2/workspace/phoenix/backend/src/Domain/Phoenix.Domain/obj/Debug/net10.0/Phoenix.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Volumes/APP2/workspace/phoenix/backend/src/Domain/Phoenix.Domain/obj/Debug/net10.0/Phoenix.Domain.AssemblyInfoInputs.cache
+/Volumes/APP2/workspace/phoenix/backend/src/Domain/Phoenix.Domain/obj/Debug/net10.0/Phoenix.Domain.AssemblyInfo.cs
+/Volumes/APP2/workspace/phoenix/backend/src/Domain/Phoenix.Domain/obj/Debug/net10.0/Phoenix.Domain.csproj.CoreCompileInputs.cache
+/Volumes/APP2/workspace/phoenix/backend/src/Domain/Phoenix.Domain/obj/Debug/net10.0/Phoenix.Domain.dll
+/Volumes/APP2/workspace/phoenix/backend/src/Domain/Phoenix.Domain/obj/Debug/net10.0/refint/Phoenix.Domain.dll
+/Volumes/APP2/workspace/phoenix/backend/src/Domain/Phoenix.Domain/obj/Debug/net10.0/Phoenix.Domain.pdb
+/Volumes/APP2/workspace/phoenix/backend/src/Domain/Phoenix.Domain/obj/Debug/net10.0/ref/Phoenix.Domain.dll
