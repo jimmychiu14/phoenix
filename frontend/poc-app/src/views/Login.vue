@@ -2,7 +2,6 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAuthStore } from '../stores/auth'
-import axios from 'axios'
 
 const email = ref('')
 const password = ref('')
@@ -15,20 +14,11 @@ const handleLogin = async () => {
   error.value = null
   loading.value = true
   try {
-    const response = await axios.post('https://phoenix-yv46.onrender.com/api/auth/login', {
-      email: email.value,
-      password: password.value
-    })
-
-    const token = response.data.token
-    authStore.setToken(token)
+    // Skip API call - set dummy token and go to dashboard
+    authStore.setToken('demo-token-12345')
     router.push('/dashboard')
   } catch (err: any) {
-    if (err.response && err.response.data) {
-      error.value = err.response.data.message || 'Login failed.'
-    } else {
-      error.value = 'Failed to connect to the server.'
-    }
+    error.value = 'An error occurred. Please try again.'
   } finally {
     loading.value = false
   }
