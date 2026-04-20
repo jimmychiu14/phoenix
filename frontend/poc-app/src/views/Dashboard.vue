@@ -201,26 +201,69 @@ const closeHistoryModal = () => {
   isHistoryModalOpen.value = false
 }
 
-const lineChartData = computed(() => ({
-  labels: historyData.value.map(d => d.date.split('-').slice(1).join('/')),
-  datasets: [{
-    label: `${historySymbol.value} Price`,
-    data: historyData.value.map(d => d.price),
-    borderColor: isDark.value ? '#22d3ee' : '#6366f1', // cyan-400 in dark, indigo-500 in light
-    backgroundColor: isDark.value ? 'rgba(34, 211, 238, 0.1)' : 'rgba(99, 102, 241, 0.1)',
-    borderWidth: 2.5,
-    fill: true,
-    tension: 0.4,
-    pointRadius: 2,
-    pointHoverRadius: 6
-  }]
-}))
+const lineChartData = computed(() => {
+  const labels = historyData.value.map(d => d.date.split('-').slice(1).join('/'))
+  const datasets = [
+    {
+      label: `${historySymbol.value} Price`,
+      data: historyData.value.map(d => d.price),
+      borderColor: isDark.value ? '#22d3ee' : '#6366f1',
+      backgroundColor: isDark.value ? 'rgba(34, 211, 238, 0.1)' : 'rgba(99, 102, 241, 0.1)',
+      borderWidth: 2.5,
+      fill: true,
+      tension: 0.4,
+      pointRadius: 1,
+      pointHoverRadius: 6
+    }
+  ]
+
+  // Add SMA20 if available
+  if (historyData.value.some(d => (d as any).sma20)) {
+    datasets.push({
+      label: 'SMA 20',
+      data: historyData.value.map(d => (d as any).sma20 || null),
+      borderColor: '#f59e0b', // amber-500
+      backgroundColor: 'transparent',
+      borderWidth: 1.5,
+      fill: false,
+      tension: 0.4,
+      pointRadius: 0,
+      pointHoverRadius: 0
+    })
+  }
+
+  // Add SMA50 if available
+  if (historyData.value.some(d => (d as any).sma50)) {
+    datasets.push({
+      label: 'SMA 50',
+      data: historyData.value.map(d => (d as any).sma50 || null),
+      borderColor: '#ef4444', // red-500
+      backgroundColor: 'transparent',
+      borderWidth: 1.5,
+      fill: false,
+      tension: 0.4,
+      pointRadius: 0,
+      pointHoverRadius: 0
+    })
+  }
+
+  return { labels, datasets }
+})
 
 const lineChartOptions = computed(() => ({
   responsive: true,
   maintainAspectRatio: false,
   plugins: {
-    legend: { display: false },
+    legend: { 
+      display: true,
+      position: 'top' as const,
+      labels: {
+        color: isDark.value ? '#cbd5e1' : '#475569',
+        font: { size: 10 },
+        boxWidth: 20,
+        usePointStyle: true
+      }
+    },
     tooltip: {
       mode: 'index' as const,
       intersect: false,
