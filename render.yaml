@@ -1,0 +1,24 @@
+# Render Blueprint
+# Deploy the Phoenix Python Scraper API
+# 1. Create a Render account at https://render.com
+# 2. Connect your GitHub repo
+# 3. Create a new "Blueprint" deployment using this file
+#    (Settings > Blueprints > New Blueprint Instance)
+# 4. Or manually: Create Web Service > select phoenix repo > 
+#    Root Directory: python-scraper
+#    Build Command: pip install -r requirements.txt
+#    Start Command: uvicorn main:app --host 0.0.0.0 --port $PORT
+
+services:
+  - type: web
+    name: phoenix-scraper
+    env: Python
+    repo: https://github.com/jimmychiu14/phoenix
+    region: singapore
+    rootDirectory: python-scraper
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /docs
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11
