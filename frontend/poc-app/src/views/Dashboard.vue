@@ -101,7 +101,7 @@ const refreshAllPrices = async () => {
   await Promise.allSettled(
     assets.value.map(async (asset) => {
       try {
-        const res = await fetch(`https://phoenix-17zh.onrender.com/api/quote/${asset.symbol}`)
+        const res = await fetch(`https://phoenix-yv46.onrender.com/api/quote/${asset.symbol}`)
         if (!res.ok) throw new Error('No data')
         const data = await res.json()
         const updated = await api.patch(`/assets/${asset.id}/price`, { price: data.price })
@@ -187,7 +187,7 @@ const openHistoryModal = async (asset: Asset) => {
   historyData.value = []
   
   try {
-    const response = await fetch(`https://phoenix-17zh.onrender.com/api/history/${asset.symbol}`)
+    const response = await fetch(`https://phoenix-yv46.onrender.com/api/history/${asset.symbol}`)
     if (!response.ok) throw new Error('Failed to fetch history')
     historyData.value = await response.json()
   } catch (err) {
@@ -333,7 +333,7 @@ const fetchLiveQuote = async () => {
   addError.value = null;
   try {
     const symbol = newAsset.value.symbol.toUpperCase();
-    const response = await fetch(`https://phoenix-17zh.onrender.com/api/quote/${symbol}`);
+    const response = await fetch(`https://phoenix-yv46.onrender.com/api/quote/${symbol}`);
     if (!response.ok) {
        throw new Error('Quote not found.');
     }
