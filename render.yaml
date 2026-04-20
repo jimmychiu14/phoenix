@@ -6,12 +6,12 @@
 # 2. Dashboard → "New +" → "Web Service"
 # 3. 設定如下：
 #    - Connect your GitHub repo: jimmychiu14/phoenix
-#    - Root Directory: python-scraper
+#    - Root Directory: (留空，不要填)
 #    - Region: Singapore
 #    - Branch: main
 #    - Runtime: Python 3.11
-#    - Build Command: pip install -r requirements.txt
-#    - Start Command: uvicorn main:app --host 0.0.0.0 --port $PORT
+#    - Build Command: pip install -r python-scraper/requirements.txt
+#    - Start Command: cd python-scraper && uvicorn main:app --host 0.0.0.0 --port $PORT
 #    - Plan: Free
 #
 # 4. 點 "Create Web Service"
