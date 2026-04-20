@@ -15,7 +15,7 @@ const handleLogin = async () => {
   error.value = null
   loading.value = true
   try {
-    const response = await axios.post('http://localhost:5004/api/auth/login', {
+    const response = await axios.post('https://phoenix-yv46.onrender.com/api/auth/login', {
       email: email.value,
       password: password.value
     })

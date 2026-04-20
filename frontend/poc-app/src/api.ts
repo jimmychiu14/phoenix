@@ -2,7 +2,7 @@ import axios from 'axios'
 import { useAuthStore } from './stores/auth'
 
 const api = axios.create({
-  baseURL: 'http://localhost:5004/api',
+  baseURL: 'https://phoenix-yv46.onrender.com/api',
 })
 
 api.interceptors.request.use(
