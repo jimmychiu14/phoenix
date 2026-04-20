@@ -1,24 +1,35 @@
-# Render Blueprint
-# Deploy the Phoenix Python Scraper API
-# 1. Create a Render account at https://render.com
-# 2. Connect your GitHub repo
-# 3. Create a new "Blueprint" deployment using this file
-#    (Settings > Blueprints > New Blueprint Instance)
-# 4. Or manually: Create Web Service > select phoenix repo > 
-#    Root Directory: python-scraper
-#    Build Command: pip install -r requirements.txt
-#    Start Command: uvicorn main:app --host 0.0.0.0 --port $PORT
+# Phoenix Scraper - Render 部署指南
+# 
+# 手動部署步驟（推薦，Blueprint 容易有循環參照問題）：
+#
+# 1. 去 https://render.com 申請免費帳號
+# 2. Dashboard → "New +" → "Web Service"
+# 3. 設定如下：
+#    - Connect your GitHub repo: jimmychiu14/phoenix
+#    - Root Directory: python-scraper
+#    - Region: Singapore
+#    - Branch: main
+#    - Runtime: Python 3.11
+#    - Build Command: pip install -r requirements.txt
+#    - Start Command: uvicorn main:app --host 0.0.0.0 --port $PORT
+#    - Plan: Free
+#
+# 4. 點 "Create Web Service"
+# 5. 等部署完成（約 2-3 分鐘），複製提供的 URL，例如：
+#    https://phoenix-scraper-xxxx.onrender.com
+#
+# 6. 把這個 URL 告訴我，我幫你更新前端設定
 
-services:
-  - type: web
-    name: phoenix-scraper
-    env: Python
-    repo: https://github.com/jimmychiu14/phoenix
-    region: singapore
-    rootDirectory: python-scraper
-    buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
-    healthCheckPath: /docs
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.11
+# ============================================
+# 以下是自動部署設定（可選用）
+# ============================================
+
+# 要使用 GitHub Actions 自動部署 Scraper 到 Render，
+# 需要在 Render 取得 API Token：
+# 1. Render Dashboard → Account Settings → API Keys
+# 2. 建立一個新的 API Key
+# 3. 在 GitHub Repo Settings → Secrets → New secret
+# 4. Name: RENDER_API_TOKEN，Value: 你的 API Key
+#
+# 以後只要 python-scraper/ 目錄有任何變更並 push 到 main，
+# 就會自動部署到 Render。
